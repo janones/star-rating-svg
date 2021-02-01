@@ -187,8 +187,17 @@
           if (index <= Math.ceil(endIndex) || (index < 1 && endIndex < 0)) {
             $polygonLeft.attr('style', 'fill:'+ratedColor);
           }
+          else {
+            //lets you deselect stars
+            $polygonLeft.attr('style', 'stroke-opacity: 0;');
+          }
+          
           if (index <= endIndex) {
             $polygonRight.attr('style', 'fill:'+ratedColor);
+          }
+          else {
+            //lets you deselect stars
+            $polygonRight.attr('style', 'stroke-opacity: 0;');
           }
         }
       }.bind(this));
